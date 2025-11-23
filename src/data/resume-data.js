@@ -2,7 +2,7 @@ export const profile = {
   name: "Mohammad Shehabul Islam",
   title: "Software Developer | QA & Frontend",
   location: "Mount Pearl, NL, Canada",
-  phone: "(+1) 709 687 4395",
+  phone: "+1 709 687 4395",
   email: "shehabul97@gmail.com",
   handle: "mohammadshehabulislam",
   summary:

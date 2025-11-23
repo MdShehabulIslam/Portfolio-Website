@@ -1,16 +1,81 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React and TailwindCSS, featuring dark mode support.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** (v19.2.0) - UI library
+- **Vite** (v7.2.2) - Build tool
+- **TailwindCSS** (v4.1.17) - Styling
+- **JavaScript (ES6+)** - Programming language
 
-## React Compiler
+## 📁 Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+src/
+├── components/
+│   ├── layout/           # Header, Footer
+│   └── sections/         # Hero, Education, Experience, Projects, Skills, Contact
+├── contexts/
+│   └── ThemeContext.jsx  # Theme state management
+├── data/
+│   └── resume-data.js    # Portfolio content
+├── App.jsx
+├── main.jsx
+└── index.css
+```
 
-## Expanding the ESLint configuration
+## 🎣 React Hooks Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **useState** - Theme state management
+- **useEffect** - Theme persistence to localStorage
+- **useContext** - Accessing theme context
+- **createContext** - Creating theme context
+- **useTheme** (custom) - Custom hook for theme access
+
+## 🔧 State Management
+
+### Theme State (Context API)
+- Light/dark mode toggle
+- Persisted in localStorage
+- System preference detection
+- Located in `src/contexts/ThemeContext.jsx`
+
+### Data Management
+- Static data in `src/data/resume-data.js`
+- Exports: profile, education, experience, projects, skills
+
+## 🎨 Key Features
+
+- **Dark/Light Mode** - Context API with localStorage persistence
+- **Responsive Design** - Mobile-first with TailwindCSS
+- **Smooth Scrolling** - CSS scroll-behavior
+- **Modern Typography** - Inter font from Google Fonts
+- **Gradient Background** - Subtle radial gradient for depth
+
+## 🚀 Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## 📝 Content Management
+
+Edit `src/data/resume-data.js` to update portfolio content without touching component code.
+
+## 👤 Author
+
+Mohammad Shehabul Islam
+📧 shehabul97@gmail.com
+💼 [LinkedIn](https://linkedin.com/in/mohammadshehabulislam)
+📍 Mount Pearl, NL, Canada
