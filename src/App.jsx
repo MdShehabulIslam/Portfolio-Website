@@ -10,7 +10,7 @@ import Skills from "./Skills";
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
+    <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
       <Header />
       <main className="mx-auto max-w-5xl px-4 pb-16 pt-10 sm:pt-12">
         <Hero />
