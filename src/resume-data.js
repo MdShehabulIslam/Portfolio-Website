@@ -103,7 +103,7 @@ export const projects = [
       "Created a dynamic React system for managing orders with CRUD operations and live updates.",
       "Conducted manual testing to verify order accuracy, UI responsiveness, and data persistence.",
     ],
-    tech: ["React", "JavaScript", "REST APIs"],
+    tech: ["JavaScript", "State Management", "POS"],
   },
   {
     name: "E-commerce Shop",
@@ -113,7 +113,7 @@ export const projects = [
       "Built an interactive shopping cart system using React, Context API, and useReducer.",
       "Designed and executed test scenarios for product addition, cart updates, and total price calculations.",
     ],
-    tech: ["React", "Context API", "useReducer"],
+    tech: ["JavaScript", "Context API", "useReducer"],
   },
   {
     name: "Realtime Weather App",
@@ -124,7 +124,7 @@ export const projects = [
       "Applied manual testing and component validation using Playwright.",
       "Utilized Context API and custom hooks for state management and performance optimization.",
     ],
-    tech: ["React", "REST APIs", "Context API", "Custom Hooks", "Playwright"],
+    tech: ["REST APIs", "Context API", "Custom Hooks", "Playwright"],
   },
 ];
 
