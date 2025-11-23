@@ -69,6 +69,30 @@ npm run build
 npm run preview
 ```
 
+## 🐳 Docker Support
+
+You can also run the application in a Docker container.
+
+### Prerequisites
+- Docker installed on your machine
+
+### Build and Run
+
+```bash
+# Build the Docker image
+docker build -t portfolio-website .
+
+# Run the container (accessible at http://localhost:8080)
+docker run -d -p 8080:80 --name portfolio-container portfolio-website
+```
+
+### Stop the Container
+
+```bash
+docker stop portfolio-container
+docker rm portfolio-container
+```
+
 ## 📝 Content Management
 
 Edit `src/data/resume-data.js` to update portfolio content without touching component code.
