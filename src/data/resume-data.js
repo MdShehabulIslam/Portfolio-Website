@@ -6,7 +6,7 @@ export const profile = {
   email: "shehabul97@gmail.com",
   handle: "mohammadshehabulislam",
   summary:
-    "Detail-oriented Software Developer with hands-on experience in software testing, manual and automated QA, and front-end development. Skilled in Java, JavaScript, and Playwright testing for web-based systems. Experienced in collaborating with cross-functional teams to verify application functionality, identify defects, and deliver reliable, high-quality releases. Strong problem-solving and analytical skills with a solid understanding of the SDLC and Agile testing environments.",
+    "Highly motivated Junior Developer with hands-on experience in React, JavaScript, TypeScript, Node.js, SQL, and modern front-end development. Experienced in building responsive web applications, writing clean and maintainable code, and supporting users through technical issues. Strong understanding of Agile workflows, testing, and version control with Git. Passionate about contributing to meaningful software that creates positive social impact and eager to grow within a collaborative, experienced development team.",
 };
 
 export const education = [

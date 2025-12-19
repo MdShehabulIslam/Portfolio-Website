@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { projects } from "../../data/resume-data";
 
 export default function Projects() {
@@ -8,13 +9,24 @@ export default function Projects() {
       aria-labelledby="projects"
     >
       <div className="space-y-6">
-        <h2 className="scroll-mt-24 text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-50 sm:text-3xl">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="scroll-mt-24 text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-50 sm:text-3xl"
+        >
           Projects
-        </h2>
+        </motion.h2>
         <div className="grid gap-5 sm:grid-cols-2">
-          {projects.map((project) => (
-            <article
+          {projects.map((project, index) => (
+            <motion.article
               key={project.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
               className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-slate-100/60 p-4 dark:border-slate-800 dark:bg-slate-900/60 sm:p-5"
             >
               <div className="space-y-2">
@@ -43,7 +55,7 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-            </article>
+            </motion.article>
           ))}
         </div>
       </div>

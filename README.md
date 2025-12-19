@@ -7,6 +7,7 @@ A modern, responsive portfolio website built with React and TailwindCSS, featuri
 - **React** (v19.2.0) - UI library
 - **Vite** (v7.2.2) - Build tool
 - **TailwindCSS** (v4.1.17) - Styling
+- **Framer Motion** (v12.23.26) - Animations
 - **JavaScript (ES6+)** - Programming language
 
 ## 📁 Project Structure
@@ -32,16 +33,19 @@ src/
 - **useContext** - Accessing theme context
 - **createContext** - Creating theme context
 - **useTheme** (custom) - Custom hook for theme access
+- **useSuspense** / **lazy** - Code splitting and lazy loading
 
 ## 🔧 State Management
 
 ### Theme State (Context API)
+
 - Light/dark mode toggle
 - Persisted in localStorage
 - System preference detection
 - Located in `src/contexts/ThemeContext.jsx`
 
 ### Data Management
+
 - Static data in `src/data/resume-data.js`
 - Exports: profile, education, experience, projects, skills
 
@@ -49,6 +53,8 @@ src/
 
 - **Dark/Light Mode** - Context API with localStorage persistence
 - **Responsive Design** - Mobile-first with TailwindCSS
+- **Smooth Animations** - Powered by Framer Motion
+- **Performance Optimized** - Lazy loading and code splitting
 - **Smooth Scrolling** - CSS scroll-behavior
 - **Modern Typography** - Inter font from Google Fonts
 - **Gradient Background** - Subtle radial gradient for depth
@@ -74,6 +80,7 @@ npm run preview
 You can also run the application in a Docker container.
 
 ### Prerequisites
+
 - Docker installed on your machine
 
 ### Build and Run

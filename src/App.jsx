@@ -1,12 +1,17 @@
+import { Suspense, lazy } from "react";
 import Footer from "./components/layout/Footer";
 import Header from "./components/layout/Header";
-import Contact from "./components/sections/Contact";
-import Education from "./components/sections/Education";
-import Experience from "./components/sections/Experience";
-import Hero from "./components/sections/Hero";
-import OtherExperience from "./components/sections/OtherExperience";
-import Projects from "./components/sections/Projects";
-import Skills from "./components/sections/Skills";
+import Loading from "./components/ui/Loading";
+
+const Contact = lazy(() => import("./components/sections/Contact"));
+const Education = lazy(() => import("./components/sections/Education"));
+const Experience = lazy(() => import("./components/sections/Experience"));
+const Hero = lazy(() => import("./components/sections/Hero"));
+const OtherExperience = lazy(() =>
+  import("./components/sections/OtherExperience")
+);
+const Projects = lazy(() => import("./components/sections/Projects"));
+const Skills = lazy(() => import("./components/sections/Skills"));
 
 function App() {
   return (
@@ -18,15 +23,17 @@ function App() {
         <Header />
         <main className="mx-auto max-w-5xl px-6 pb-16 pt-8 sm:px-8 sm:pb-24 sm:pt-12">
           <div className="space-y-12 sm:space-y-20">
-            <Hero />
-            <div className="space-y-12 sm:space-y-20">
-              <Education />
-              <Experience />
-              <OtherExperience />
-              <Projects />
-              <Skills />
-              <Contact />
-            </div>
+            <Suspense fallback={<Loading />}>
+              <Hero />
+              <div className="space-y-12 sm:space-y-20">
+                <Education />
+                <Experience />
+                <OtherExperience />
+                <Projects />
+                <Skills />
+                <Contact />
+              </div>
+            </Suspense>
           </div>
         </main>
         <Footer />

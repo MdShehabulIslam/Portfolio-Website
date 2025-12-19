@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { experience } from "../../data/resume-data";
 
 export default function Experience() {
@@ -8,13 +9,23 @@ export default function Experience() {
       aria-labelledby="experience"
     >
       <div className="space-y-6">
-        <h2 className="scroll-mt-24 text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-50 sm:text-3xl">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="scroll-mt-24 text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-50 sm:text-3xl"
+        >
           Experience
-        </h2>
+        </motion.h2>
         <div className="space-y-6">
-          {experience.map((role) => (
-            <article
+          {experience.map((role, index) => (
+            <motion.article
               key={`${role.company}-${role.role}`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
               className="rounded-2xl border border-slate-200 bg-slate-100/60 p-4 dark:border-slate-800 dark:bg-slate-900/60 sm:p-5"
             >
               <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
@@ -38,7 +49,7 @@ export default function Experience() {
                   </li>
                 ))}
               </ul>
-            </article>
+            </motion.article>
           ))}
         </div>
       </div>
