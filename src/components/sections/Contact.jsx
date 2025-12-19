@@ -117,15 +117,32 @@ export default function Contact() {
       aria-labelledby="contact"
     >
       <div className="space-y-6">
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="scroll-mt-24 text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-50 sm:text-3xl"
+          className="flex items-center gap-3"
         >
-          Contact
-        </motion.h2>
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-100 text-sky-600 dark:bg-sky-900/30 dark:text-sky-400">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="h-6 w-6"
+            >
+              <path
+                fillRule="evenodd"
+                d="M4.804 21.644A6.707 6.707 0 006 21.75a6.721 6.721 0 003.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 01-.814 1.686.75.75 0 00.44 1.223zM8.25 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM10.875 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zm4.875-1.125a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </div>
+          <h2 className="scroll-mt-24 text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-50 sm:text-3xl">
+            Contact
+          </h2>
+        </motion.div>
+
         <div className="grid gap-8 sm:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)]">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -147,7 +164,7 @@ export default function Contact() {
             </div>
 
             <div className="space-y-4">
-              <div className="flex items-center gap-4 rounded-xl border border-slate-200 bg-slate-50/50 p-4 transition-colors hover:bg-slate-100/50 dark:border-slate-800 dark:bg-slate-900/50 dark:hover:bg-slate-800/50">
+              <div className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50/50 p-4 transition-colors hover:bg-slate-100/50 dark:border-slate-800 dark:bg-slate-900/50 dark:hover:bg-slate-800/50">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-sky-100 text-sky-600 dark:bg-sky-900/30 dark:text-sky-400">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +189,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 rounded-xl border border-slate-200 bg-slate-50/50 p-4 transition-colors hover:bg-slate-100/50 dark:border-slate-800 dark:bg-slate-900/50 dark:hover:bg-slate-800/50">
+              <div className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50/50 p-4 transition-colors hover:bg-slate-100/50 dark:border-slate-800 dark:bg-slate-900/50 dark:hover:bg-slate-800/50">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-400">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +214,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 rounded-xl border border-slate-200 bg-slate-50/50 p-4 transition-colors hover:bg-slate-100/50 dark:border-slate-800 dark:bg-slate-900/50 dark:hover:bg-slate-800/50">
+              <div className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50/50 p-4 transition-colors hover:bg-slate-100/50 dark:border-slate-800 dark:bg-slate-900/50 dark:hover:bg-slate-800/50">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-400">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -219,6 +236,32 @@ export default function Contact() {
                   <p className="text-sm font-medium text-slate-900 dark:text-slate-200">
                     {profile.location}
                   </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50/50 p-4 transition-colors hover:bg-slate-100/50 dark:border-slate-800 dark:bg-slate-900/50 dark:hover:bg-slate-800/50">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-5 w-5"
+                  >
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs font-medium text-slate-500 dark:text-slate-400">
+                    LinkedIn
+                  </p>
+                  <a
+                    href={`https://www.linkedin.com/in/${profile.handle}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium text-slate-900 hover:text-sky-600 dark:text-slate-200 dark:hover:text-sky-400"
+                  >
+                    {profile.handle}
+                  </a>
                 </div>
               </div>
             </div>

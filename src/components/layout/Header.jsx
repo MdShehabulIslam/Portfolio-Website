@@ -19,15 +19,21 @@ export default function Header() {
           <nav className="hidden gap-4 text-sm text-slate-600 dark:text-slate-300 sm:flex">
             {[
               ["about", "About"],
+              ["education", "Education"],
               ["experience", "Experience"],
               ["projects", "Projects"],
               ["skills", "Skills"],
-              ["education", "Education"],
               ["contact", "Contact"],
             ].map(([id, label]) => (
               <a
                 key={id}
-                href={`#${id}`}
+                href={id === "about" ? "#" : `#${id}`}
+                onClick={(e) => {
+                  if (id === "about") {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }
+                }}
                 className="rounded-full px-3 py-1 text-xs font-medium text-slate-600 transition hover:bg-slate-200 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-slate-50"
               >
                 {label}
