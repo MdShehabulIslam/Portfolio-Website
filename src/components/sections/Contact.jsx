@@ -32,7 +32,7 @@ export default function Contact() {
               building reliable, well-tested web applications.
             </p>
             <p>
-              Feel free to reach out if you'd like to discuss roles,
+              Feel free to reach out if you&apos;d like to discuss roles,
               collaborations, or projects.
             </p>
           </motion.div>
