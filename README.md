@@ -1,14 +1,19 @@
 # Portfolio Website
 
-A modern, responsive portfolio website built with React and TailwindCSS, featuring dark mode support.
+A modern, responsive portfolio website built with React, Vite, and TailwindCSS. This project showcases your professional experience, education, skills, and projects in a visually appealing and performant web application.
+
+---
 
 ## 🚀 Tech Stack
 
-- **React** (v19.2.0) - UI library
-- **Vite** (v7.2.2) - Build tool
-- **TailwindCSS** (v4.1.17) - Styling
-- **Framer Motion** (v12.23.26) - Animations
-- **JavaScript (ES6+)** - Programming language
+- **React** (v19.2.0) – Component-based UI library
+- **Vite** (v7.2.2) – Lightning-fast build tool
+- **TailwindCSS** (v4.1.17) – Utility-first CSS framework
+- **Framer Motion** (v12.23.26) – Declarative animations
+- **React Hook Form** (v7.68.0) – Form management
+- **JavaScript (ES6+)**
+
+---
 
 ## 📁 Project Structure
 
@@ -26,64 +31,48 @@ src/
 └── index.css
 ```
 
-## 🎣 React Hooks Used
-
-- **useState** - Theme state management
-- **useEffect** - Theme persistence to localStorage
-- **useContext** - Accessing theme context
-- **createContext** - Creating theme context
-- **useTheme** (custom) - Custom hook for theme access
-- **useSuspense** / **lazy** - Code splitting and lazy loading
-
-## 🔧 State Management
-
-### Theme State (Context API)
-
-- Light/dark mode toggle
-- Persisted in localStorage
-- System preference detection
-- Located in `src/contexts/ThemeContext.jsx`
-
-### Data Management
-
-- Static data in `src/data/resume-data.js`
-- Exports: profile, education, experience, projects, skills
+---
 
 ## 🎨 Key Features
 
-- **Dark/Light Mode** - Context API with localStorage persistence
-- **Responsive Design** - Mobile-first with TailwindCSS
-- **Smooth Animations** - Powered by Framer Motion
-- **Performance Optimized** - Lazy loading and code splitting
-- **Smooth Scrolling** - CSS scroll-behavior
-- **Modern Typography** - Inter font from Google Fonts
-- **Gradient Background** - Subtle radial gradient for depth
+- **Dark/Light Mode** – Context API with localStorage persistence
+- **Responsive Design** – Mobile-first, works on all devices
+- **Smooth Animations** – Powered by Framer Motion
+- **Performance Optimized** – Lazy loading, code splitting
+- **Modern Typography** – Google Fonts (Inter)
+- **Gradient Background** – Subtle, modern look
+- **Easy Content Management** – Update your info in a single file
 
-## 🚀 Getting Started
+---
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
 
 ```bash
 # Install dependencies
 npm install
 
-# Run development server
+# Start the development server
 npm run dev
 
 # Build for production
 npm run build
 
-# Preview production build
+# Preview the production build
 npm run preview
 ```
 
+---
+
 ## 🐳 Docker Support
 
-You can also run the application in a Docker container.
-
-### Prerequisites
-
-- Docker installed on your machine
-
-### Build and Run
+You can run the application in a Docker container for easy deployment.
 
 ```bash
 # Build the Docker image
@@ -91,22 +80,35 @@ docker build -t portfolio-website .
 
 # Run the container (accessible at http://localhost:8080)
 docker run -d -p 8080:80 --name portfolio-container portfolio-website
-```
 
-### Stop the Container
-
-```bash
+# Stop and remove the container
 docker stop portfolio-container
 docker rm portfolio-container
 ```
 
+---
+
 ## 📝 Content Management
 
-Edit `src/data/resume-data.js` to update portfolio content without touching component code.
+All portfolio content (profile, education, experience, projects, skills) is managed in `src/data/resume-data.js`. Edit this file to update your information without modifying component code.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for improvements or bug fixes.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
 
 ## 👤 Author
 
-Mohammad Shehabul Islam
+**Mohammad Shehabul Islam**
 📧 shehabul97@gmail.com
-💼 [LinkedIn](https://linkedin.com/in/mohammadshehabulislam)
+[LinkedIn](https://linkedin.com/in/mohammadshehabulislam)
 📍 Mount Pearl, NL, Canada
